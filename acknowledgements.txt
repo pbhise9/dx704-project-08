@@ -1,0 +1,17 @@
+Took help of ChatGPT to fix the errors in problem 2 and problem 3 
+
+The failing new_value points to the discount factor. In this assignment, the update is not the undiscounted r + max Q(s',a').
+
+Use:
+
+alpha = 1.0
+
+gamma = 0.5
+
+That makes the update:
+
+new_value = old_value + alpha * (next_reward + gamma * next_max - old_value)
+
+With alpha = 1, this becomes:
+
+new_value = next_reward + 0.5 * next_max
