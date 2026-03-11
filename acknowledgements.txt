@@ -1,5 +1,13 @@
 Took help of ChatGPT to fix the errors in problem 2 and problem 3 
 
+Use:
+
+random.seed(0) before generating each file
+
+deterministic greedy tie-break: pick the first best action in actions order ([-1, 0, 1])
+
+Q-learning update with alpha = 1.0, gamma = 1.0
+
 The failing new_value points to the discount factor. In this assignment, the update is not the undiscounted r + max Q(s',a').
 
 Use:
